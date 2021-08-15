@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from "mongodb";
 
-const dbName = "db-name";
-const url = `mongodb+srv://root:mdf3Xb4S2crNOIjH@cluster0.tt47l.mongodb.net/ua?retryWrites=true&w=majority`;
+const dbName = "ua";
+const url = `mongodb+srv://kobo:k9xs0ybkqis4ndUy@cluster0.tt47l.mongodb.net/ua?retryWrites=true&w=majority`;
 
 const client = new MongoClient(url, {
   useNewUrlParser: true,

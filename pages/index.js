@@ -101,6 +101,7 @@ const Index = () => {
         <button className={styles.button} onClick={save}>
           {saving ? "Saving..." : "Save"}
         </button>
+
       </div>
       <SplitPane
         style={{ marginTop: "120px" }}
