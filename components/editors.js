@@ -4,6 +4,11 @@ import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/mode-html";
 import "ace-builds/src-noconflict/mode-css";
 import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-min-noconflict/ext-language_tools";
+import "ace-builds/src-min-noconflict/ext-spellcheck";
+import "ace-builds/src-min-noconflict/snippets/javascript";
+import 'ace-builds/src-min-noconflict/ext-searchbox';
+import "ace-builds/src-min-noconflict/ext-language_tools";
 
 import styles from "./editors.module.css";
 
@@ -34,8 +39,20 @@ const Editor = ({ mode, onChange, value, title, height }) => {
         value={value}
         showPrintMargin={true}
         showGutter={true}
-        tabSize={2}
-        setOptions={{ useWorker: false }}
+
+        editorProps={{ $blockScrolling: true }}
+        wrapEnabled= {true}
+        highlightActiveLine={true}
+        autoScrollEditorIntoView ={true}
+        setOptions={{
+          enableBasicAutocompletion: true,
+          enableLiveAutocompletion: true,
+          enableSnippets: true,
+          showLineNumbers: true,
+          tabSize: 2,
+          showGutter: true
+        }}
+        // setOptions={{ useWorker: false }}
       />
     </div>
   );

@@ -20,9 +20,11 @@
   height: 60px;
   background-color: #1d1e22;
   border-bottom: 5px solid #333642;
-  display: flex;
+  /* display: flex; */
   padding: 10px;
   box-sizing: border-box;
+  float: right;
+  width: 100%;
 }
 
 .button {
@@ -34,8 +36,28 @@
   border: 3px solid #444857;
   border-radius: 8px;
   cursor: pointer;
+  float: right;
 }
 
 .button:hover, .button:focus {
   background-color: #5a6074;
+}
+
+.container {
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background:#444645;
+
+}
+
+.container > .nav {
+  display: flex;
+  justify-content: space-between
+}
+
+.h1 {
+  color: #FFCEA2;
+  margin-left: 10px;
 }

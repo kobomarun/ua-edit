@@ -4,7 +4,7 @@ import SplitPane from "react-split-pane";
 
 import { CssEditor, HtmlEditor, JavascriptEditor } from "../components/editors";
 import { useDebounce } from "../utils/useDebounce";
-
+import Header from "./Header";
 import styles from "./index.module.css";
 
 const Index = () => {
@@ -49,7 +49,7 @@ const Index = () => {
   }, [id]);
 
   useEffect(() => {
-    const output = `<html>
+    const output = `<html> 
                     <style>
                     ${debouncedCss}
                     </style>
@@ -92,7 +92,9 @@ const Index = () => {
 
   return (
     <>
+    <Header />
       <div className={styles.header}>
+        
         <button className={styles.button} onClick={() => (location.href = "/")}>
           New
         </button>
@@ -101,7 +103,7 @@ const Index = () => {
         </button>
       </div>
       <SplitPane
-        style={{ marginTop: "60px" }}
+        style={{ marginTop: "120px" }}
         split="horizontal"
         minSize={"50%"}
         onDragFinished={(height) => {
